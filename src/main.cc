@@ -7,30 +7,21 @@ using std::cout;
 using std::endl;
 using std::cin;
 
-using edu::vcccd::vc::csv15::binarysearch;
-
-
-
-
-int main() {
+int main(int argc, char *argv[]) {
 
 	//Variable list
 
 	int64_t array[] = { 1,2,3,4,5,6,7,8,9 };
-
 	size_t size = 9;
-
 	int64_t value;
-
 
 	//get value
 
 	cout << "Select a number 1 through 9 for index lookup: ";
-
 	cin >> value;
 
-
-	int64_t Index = binarysearch(value, array, size);
+	//output to user
+	int64_t Index = binarySearch(value, array, size);
 	cout << "The value you were looking for was at: " << Index << endl;
 
 	return 0;
