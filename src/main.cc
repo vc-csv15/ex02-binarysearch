@@ -6,7 +6,7 @@
 using std::cout;
 using std::endl;
 using std::cin;
-
+using edu::vcccd::vc::csv15::binarysearch;
 int main(int argc, char *argv[]) {
 
 	//Variable list
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 	cin >> value;
 
 	//output to user
-	int64_t Index = binarySearch(value, array, size);
+	int64_t Index = binarysearch(value, array, size);
 	cout << "The value you were looking for was at: " << Index << endl;
 
 	return 0;
