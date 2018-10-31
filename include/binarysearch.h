@@ -12,7 +12,8 @@ namespace edu {
 
 				int64_t binarySearch(const T &value, T array[], size_t size) {
                     int64_t mid, high = size - 1, low;
-                    for (low = 0; high >= low; mid = (high - low)/2 ) {
+                    for (low = 0; high >= low; ) {
+                        mid = (high - low)/2;
 
                         if (array[mid] == value) {
                             return mid;
