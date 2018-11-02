@@ -11,10 +11,8 @@ namespace edu {
 				template<class T>
 
 				int64_t binarysearch(const T &value, T array[], size_t size) {
-                    int64_t high = size - 1;
-                    int64_t low = 0;
-                    int64_t mid = 0;
-                    for (low = 0; high >) {
+                    size_t mid = size/2 ;
+                    for (size_t low = 0, high = size - 1; high > low ; mid = (high + low)/2) {
 
                         if (array[mid] == value) {
                             return mid;
@@ -27,11 +25,8 @@ namespace edu {
                         if (array[mid]<value) {
                             low = mid + 1;
                         }
-
-                        return 0;
-
-
                     }
+                    return array[mid] == value ? mid : -1; // GO TERNARY!
 				}
 			}
 		}
